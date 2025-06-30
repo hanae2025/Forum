@@ -1,0 +1,874 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.1 (Python 3.13.5 on win32)" generated="2025-06-30T13:37:47.504093" rpa="false" schemaversion="5">
+<suite id="s1" name="Cas" source="C:\Users\HP\OneDrive\Documents\TNR.Rbot Framewok\Test cases\cas.robot">
+<test id="s1-t1" name="Connexion Valide" line="58">
+<kw name="Ouvrir La Page De Connexion">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-06-30T13:37:48.207463" level="INFO">Opening browser 'chrome' to base url 'http://localhost/flarum-v1.x-php8.0/public/'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-06-30T13:37:48.207173" elapsed="9.349665"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-06-30T13:37:57.557509" elapsed="0.063568"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//button[normalize-space()='Log In']</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-30T13:37:57.621612" elapsed="0.131035"/>
+</kw>
+<kw name="Attendre Disparition Backdrop">
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>xpath=//div[contains(@class,'ModalManager-invisibleBackdrop')]</arg>
+<arg>${MODAL_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2025-06-30T13:37:57.753619" elapsed="0.015693"/>
+</kw>
+<arg>Wait Until Element Is Not Visible</arg>
+<arg>xpath=//div[contains(@class,'ModalManager-invisibleBackdrop')]</arg>
+<arg>${MODAL_TIMEOUT}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-06-30T13:37:57.753423" elapsed="0.016016"/>
+</kw>
+<status status="PASS" start="2025-06-30T13:37:57.752976" elapsed="0.016560"/>
+</kw>
+<kw name="Cliquer Sur Bouton Modal">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${xpath}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-30T13:37:57.770112" elapsed="0.022525"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${xpath}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-06-30T13:37:57.792831" elapsed="0.062938"/>
+</kw>
+<kw name="Attendre Disparition Backdrop">
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>xpath=//div[contains(@class,'ModalManager-invisibleBackdrop')]</arg>
+<arg>${MODAL_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2025-06-30T13:37:57.857050" elapsed="0.012488"/>
+</kw>
+<arg>Wait Until Element Is Not Visible</arg>
+<arg>xpath=//div[contains(@class,'ModalManager-invisibleBackdrop')]</arg>
+<arg>${MODAL_TIMEOUT}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-06-30T13:37:57.856754" elapsed="0.012943"/>
+</kw>
+<status status="PASS" start="2025-06-30T13:37:57.856218" elapsed="0.013604"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-30T13:37:57.870334" level="INFO">Clicking element '//button[normalize-space()='Log In']'.</msg>
+<arg>${xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-30T13:37:57.870000" elapsed="0.125407"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-30T13:37:58.996528" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-30T13:37:57.995677" elapsed="1.000995"/>
+</kw>
+<kw name="Attendre Disparition Backdrop">
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<msg time="2025-06-30T13:38:19.183968" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-06-30T13:38:19.184398" level="FAIL">Element 'xpath=//div[contains(@class,'ModalManager-invisibleBackdrop')]' still visible after 20 seconds.</msg>
+<arg>xpath=//div[contains(@class,'ModalManager-invisibleBackdrop')]</arg>
+<arg>${MODAL_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="FAIL" start="2025-06-30T13:37:58.997509" elapsed="20.297301">Element 'xpath=//div[contains(@class,'ModalManager-invisibleBackdrop')]' still visible after 20 seconds.</status>
+</kw>
+<arg>Wait Until Element Is Not Visible</arg>
+<arg>xpath=//div[contains(@class,'ModalManager-invisibleBackdrop')]</arg>
+<arg>${MODAL_TIMEOUT}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-06-30T13:37:58.997342" elapsed="20.298064"/>
+</kw>
+<status status="PASS" start="2025-06-30T13:37:58.996918" elapsed="20.298829"/>
+</kw>
+<arg>xpath=//button[normalize-space()='Log In']</arg>
+<status status="PASS" start="2025-06-30T13:37:57.769778" elapsed="21.526212"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//input[@placeholder='Username or Email']</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-30T13:38:19.296394" elapsed="0.042236"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-30T13:38:19.840536" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-30T13:38:19.339181" elapsed="0.501934"/>
+</kw>
+<status status="PASS" start="2025-06-30T13:37:48.205841" elapsed="31.635589"/>
+</kw>
+<kw name="Faire Login">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-30T13:38:19.850788" level="INFO">Typing text 'berrichihanae1@gmail.com' into text field 'xpath=//input[@placeholder='Username or Email']'.</msg>
+<arg>xpath=//input[@placeholder='Username or Email']</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-30T13:38:19.848888" elapsed="0.448004"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-30T13:38:20.297884" level="INFO">Typing text 'CGI.@2026' into text field 'xpath=//input[@placeholder='Password']'.</msg>
+<arg>xpath=//input[@placeholder='Password']</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-30T13:38:20.297304" elapsed="0.273546"/>
+</kw>
+<kw name="Cliquer Sur Bouton Modal">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${xpath}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-30T13:38:20.572657" elapsed="0.049246"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${xpath}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-06-30T13:38:20.622430" elapsed="0.070096"/>
+</kw>
+<kw name="Attendre Disparition Backdrop">
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<msg time="2025-06-30T13:38:41.102692" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-06-30T13:38:41.103067" level="FAIL">Element 'xpath=//div[contains(@class,'ModalManager-invisibleBackdrop')]' still visible after 20 seconds.</msg>
+<arg>xpath=//div[contains(@class,'ModalManager-invisibleBackdrop')]</arg>
+<arg>${MODAL_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="FAIL" start="2025-06-30T13:38:20.694765" elapsed="20.410680">Element 'xpath=//div[contains(@class,'ModalManager-invisibleBackdrop')]' still visible after 20 seconds.</status>
+</kw>
+<arg>Wait Until Element Is Not Visible</arg>
+<arg>xpath=//div[contains(@class,'ModalManager-invisibleBackdrop')]</arg>
+<arg>${MODAL_TIMEOUT}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-06-30T13:38:20.694166" elapsed="20.411510"/>
+</kw>
+<status status="PASS" start="2025-06-30T13:38:20.693198" elapsed="20.412634"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-30T13:38:41.106567" level="INFO">Clicking element '//button[@type='submit' and normalize-space()='Log In']'.</msg>
+<arg>${xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-30T13:38:41.106109" elapsed="0.168101"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-30T13:38:42.277347" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-30T13:38:41.274850" elapsed="1.002834"/>
+</kw>
+<kw name="Attendre Disparition Backdrop">
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<msg time="2025-06-30T13:39:02.598035" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-06-30T13:39:02.598667" level="FAIL">Element 'xpath=//div[contains(@class,'ModalManager-invisibleBackdrop')]' still visible after 20 seconds.</msg>
+<arg>xpath=//div[contains(@class,'ModalManager-invisibleBackdrop')]</arg>
+<arg>${MODAL_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="FAIL" start="2025-06-30T13:38:42.280478" elapsed="20.321751">Element 'xpath=//div[contains(@class,'ModalManager-invisibleBackdrop')]' still visible after 20 seconds.</status>
+</kw>
+<arg>Wait Until Element Is Not Visible</arg>
+<arg>xpath=//div[contains(@class,'ModalManager-invisibleBackdrop')]</arg>
+<arg>${MODAL_TIMEOUT}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-06-30T13:38:42.279650" elapsed="20.322983"/>
+</kw>
+<status status="PASS" start="2025-06-30T13:38:42.278350" elapsed="20.324597"/>
+</kw>
+<arg>xpath=//button[@type='submit' and normalize-space()='Log In']</arg>
+<status status="PASS" start="2025-06-30T13:38:20.571647" elapsed="42.031576"/>
+</kw>
+<arg>berrichihanae1@gmail.com</arg>
+<arg>CGI.@2026</arg>
+<status status="PASS" start="2025-06-30T13:38:19.844339" elapsed="42.759164"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Welcome to CGI FORUM</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-06-30T13:39:02.605851" elapsed="0.033002"/>
+</kw>
+<kw name="Fermer Navigateur">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-06-30T13:39:02.640621" elapsed="2.423368"/>
+</kw>
+<status status="PASS" start="2025-06-30T13:39:02.639848" elapsed="2.424500"/>
+</kw>
+<doc>Vérifie qu'un utilisateur peut se connecter avec de bons identifiants</doc>
+<status status="PASS" start="2025-06-30T13:37:48.204604" elapsed="76.860800"/>
+</test>
+<test id="s1-t2" name="Connexion Invalide" line="65">
+<kw name="Ouvrir La Page De Connexion">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-06-30T13:39:05.074426" level="INFO">Opening browser 'chrome' to base url 'http://localhost/flarum-v1.x-php8.0/public/'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-06-30T13:39:05.073786" elapsed="2.300418"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-06-30T13:39:07.374606" elapsed="0.069032"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//button[normalize-space()='Log In']</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-30T13:39:07.444079" elapsed="0.034680"/>
+</kw>
+<kw name="Attendre Disparition Backdrop">
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>xpath=//div[contains(@class,'ModalManager-invisibleBackdrop')]</arg>
+<arg>${MODAL_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2025-06-30T13:39:07.480641" elapsed="0.017189"/>
+</kw>
+<arg>Wait Until Element Is Not Visible</arg>
+<arg>xpath=//div[contains(@class,'ModalManager-invisibleBackdrop')]</arg>
+<arg>${MODAL_TIMEOUT}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-06-30T13:39:07.480151" elapsed="0.017966"/>
+</kw>
+<status status="PASS" start="2025-06-30T13:39:07.479352" elapsed="0.019001"/>
+</kw>
+<kw name="Cliquer Sur Bouton Modal">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${xpath}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-30T13:39:07.499701" elapsed="0.025315"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${xpath}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-06-30T13:39:07.525557" elapsed="0.038360"/>
+</kw>
+<kw name="Attendre Disparition Backdrop">
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>xpath=//div[contains(@class,'ModalManager-invisibleBackdrop')]</arg>
+<arg>${MODAL_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2025-06-30T13:39:07.566343" elapsed="0.012521"/>
+</kw>
+<arg>Wait Until Element Is Not Visible</arg>
+<arg>xpath=//div[contains(@class,'ModalManager-invisibleBackdrop')]</arg>
+<arg>${MODAL_TIMEOUT}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-06-30T13:39:07.565838" elapsed="0.013370"/>
+</kw>
+<status status="PASS" start="2025-06-30T13:39:07.564805" elapsed="0.014723"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-30T13:39:07.580747" level="INFO">Clicking element '//button[normalize-space()='Log In']'.</msg>
+<arg>${xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-30T13:39:07.579932" elapsed="0.129176"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-30T13:39:08.713416" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-30T13:39:07.709603" elapsed="1.007390"/>
+</kw>
+<kw name="Attendre Disparition Backdrop">
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<msg time="2025-06-30T13:39:28.995955" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-06-30T13:39:28.996534" level="FAIL">Element 'xpath=//div[contains(@class,'ModalManager-invisibleBackdrop')]' still visible after 20 seconds.</msg>
+<arg>xpath=//div[contains(@class,'ModalManager-invisibleBackdrop')]</arg>
+<arg>${MODAL_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="FAIL" start="2025-06-30T13:39:08.720553" elapsed="20.280290">Element 'xpath=//div[contains(@class,'ModalManager-invisibleBackdrop')]' still visible after 20 seconds.</status>
+</kw>
+<arg>Wait Until Element Is Not Visible</arg>
+<arg>xpath=//div[contains(@class,'ModalManager-invisibleBackdrop')]</arg>
+<arg>${MODAL_TIMEOUT}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-06-30T13:39:08.719752" elapsed="20.281870"/>
+</kw>
+<status status="PASS" start="2025-06-30T13:39:08.718715" elapsed="20.283207"/>
+</kw>
+<arg>xpath=//button[normalize-space()='Log In']</arg>
+<status status="PASS" start="2025-06-30T13:39:07.498818" elapsed="21.503293"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//input[@placeholder='Username or Email']</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-30T13:39:29.002647" elapsed="0.047704"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-30T13:39:29.552207" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-30T13:39:29.051049" elapsed="0.501501"/>
+</kw>
+<status status="PASS" start="2025-06-30T13:39:05.071502" elapsed="24.481393"/>
+</kw>
+<kw name="Faire Login">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-30T13:39:29.556113" level="INFO">Typing text 'faux_utilisateur' into text field 'xpath=//input[@placeholder='Username or Email']'.</msg>
+<arg>xpath=//input[@placeholder='Username or Email']</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-30T13:39:29.555334" elapsed="0.313799"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-30T13:39:29.870346" level="INFO">Typing text 'mauvais_mdp' into text field 'xpath=//input[@placeholder='Password']'.</msg>
+<arg>xpath=//input[@placeholder='Password']</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-30T13:39:29.869615" elapsed="0.245058"/>
+</kw>
+<kw name="Cliquer Sur Bouton Modal">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${xpath}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-30T13:39:30.116174" elapsed="0.032212"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${xpath}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-06-30T13:39:30.148891" elapsed="0.061775"/>
+</kw>
+<kw name="Attendre Disparition Backdrop">
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<msg time="2025-06-30T13:39:50.572137" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-06-30T13:39:50.572544" level="FAIL">Element 'xpath=//div[contains(@class,'ModalManager-invisibleBackdrop')]' still visible after 20 seconds.</msg>
+<arg>xpath=//div[contains(@class,'ModalManager-invisibleBackdrop')]</arg>
+<arg>${MODAL_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="FAIL" start="2025-06-30T13:39:30.212482" elapsed="20.367008">Element 'xpath=//div[contains(@class,'ModalManager-invisibleBackdrop')]' still visible after 20 seconds.</status>
+</kw>
+<arg>Wait Until Element Is Not Visible</arg>
+<arg>xpath=//div[contains(@class,'ModalManager-invisibleBackdrop')]</arg>
+<arg>${MODAL_TIMEOUT}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-06-30T13:39:30.212065" elapsed="20.367830"/>
+</kw>
+<status status="PASS" start="2025-06-30T13:39:30.211242" elapsed="20.368987"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-30T13:39:50.581405" level="INFO">Clicking element '//button[@type='submit' and normalize-space()='Log In']'.</msg>
+<arg>${xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-30T13:39:50.580700" elapsed="0.144949"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-30T13:39:51.729587" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-30T13:39:50.726132" elapsed="1.003780"/>
+</kw>
+<kw name="Attendre Disparition Backdrop">
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<msg time="2025-06-30T13:40:11.982269" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-06-30T13:40:11.982590" level="FAIL">Element 'xpath=//div[contains(@class,'ModalManager-invisibleBackdrop')]' still visible after 20 seconds.</msg>
+<arg>xpath=//div[contains(@class,'ModalManager-invisibleBackdrop')]</arg>
+<arg>${MODAL_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="FAIL" start="2025-06-30T13:39:51.734107" elapsed="20.251958">Element 'xpath=//div[contains(@class,'ModalManager-invisibleBackdrop')]' still visible after 20 seconds.</status>
+</kw>
+<arg>Wait Until Element Is Not Visible</arg>
+<arg>xpath=//div[contains(@class,'ModalManager-invisibleBackdrop')]</arg>
+<arg>${MODAL_TIMEOUT}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-06-30T13:39:51.733509" elapsed="20.252941"/>
+</kw>
+<status status="PASS" start="2025-06-30T13:39:51.730526" elapsed="20.256245"/>
+</kw>
+<arg>xpath=//button[@type='submit' and normalize-space()='Log In']</arg>
+<status status="PASS" start="2025-06-30T13:39:30.115272" elapsed="41.871702"/>
+</kw>
+<arg>faux_utilisateur</arg>
+<arg>mauvais_mdp</arg>
+<status status="PASS" start="2025-06-30T13:39:29.553873" elapsed="42.433379"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-06-30T13:40:12.033112" level="INFO">Current page contains text 'Log In'.</msg>
+<arg>Log In</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-06-30T13:40:11.988211" elapsed="0.045083"/>
+</kw>
+<kw name="Fermer Navigateur">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-06-30T13:40:12.034709" elapsed="2.410727"/>
+</kw>
+<status status="PASS" start="2025-06-30T13:40:12.034126" elapsed="2.411544"/>
+</kw>
+<doc>Vérifie qu'un utilisateur ne peut pas se connecter avec de mauvais identifiants</doc>
+<status status="PASS" start="2025-06-30T13:39:05.069265" elapsed="69.378883"/>
+</test>
+<test id="s1-t3" name="Inscription Valide" line="72">
+<kw name="Ouvrir La Page D'Inscription">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-06-30T13:40:14.455810" level="INFO">Opening browser 'chrome' to base url 'http://localhost/flarum-v1.x-php8.0/public/'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-06-30T13:40:14.454462" elapsed="2.424521"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-06-30T13:40:16.879458" elapsed="0.075353"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//button[normalize-space()='Sign Up']</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-30T13:40:16.955326" elapsed="0.051835"/>
+</kw>
+<kw name="Attendre Disparition Backdrop">
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>xpath=//div[contains(@class,'ModalManager-invisibleBackdrop')]</arg>
+<arg>${MODAL_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2025-06-30T13:40:17.009138" elapsed="0.013260"/>
+</kw>
+<arg>Wait Until Element Is Not Visible</arg>
+<arg>xpath=//div[contains(@class,'ModalManager-invisibleBackdrop')]</arg>
+<arg>${MODAL_TIMEOUT}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-06-30T13:40:17.008704" elapsed="0.013903"/>
+</kw>
+<status status="PASS" start="2025-06-30T13:40:17.007884" elapsed="0.014891"/>
+</kw>
+<kw name="Cliquer Sur Bouton Modal">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${xpath}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-30T13:40:17.023751" elapsed="0.021938"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${xpath}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-06-30T13:40:17.046136" elapsed="0.046930"/>
+</kw>
+<kw name="Attendre Disparition Backdrop">
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>xpath=//div[contains(@class,'ModalManager-invisibleBackdrop')]</arg>
+<arg>${MODAL_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2025-06-30T13:40:17.094939" elapsed="0.030579"/>
+</kw>
+<arg>Wait Until Element Is Not Visible</arg>
+<arg>xpath=//div[contains(@class,'ModalManager-invisibleBackdrop')]</arg>
+<arg>${MODAL_TIMEOUT}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-06-30T13:40:17.094473" elapsed="0.031407"/>
+</kw>
+<status status="PASS" start="2025-06-30T13:40:17.093696" elapsed="0.032456"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-30T13:40:17.127221" level="INFO">Clicking element '//button[normalize-space()='Sign Up']'.</msg>
+<arg>${xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-30T13:40:17.126565" elapsed="0.203131"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-30T13:40:18.331358" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-30T13:40:17.330105" elapsed="1.001550"/>
+</kw>
+<kw name="Attendre Disparition Backdrop">
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<msg time="2025-06-30T13:40:38.659267" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-06-30T13:40:38.659727" level="FAIL">Element 'xpath=//div[contains(@class,'ModalManager-invisibleBackdrop')]' still visible after 20 seconds.</msg>
+<arg>xpath=//div[contains(@class,'ModalManager-invisibleBackdrop')]</arg>
+<arg>${MODAL_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="FAIL" start="2025-06-30T13:40:18.333217" elapsed="20.330733">Element 'xpath=//div[contains(@class,'ModalManager-invisibleBackdrop')]' still visible after 20 seconds.</status>
+</kw>
+<arg>Wait Until Element Is Not Visible</arg>
+<arg>xpath=//div[contains(@class,'ModalManager-invisibleBackdrop')]</arg>
+<arg>${MODAL_TIMEOUT}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-06-30T13:40:18.332819" elapsed="20.331479"/>
+</kw>
+<status status="PASS" start="2025-06-30T13:40:18.332138" elapsed="20.333269"/>
+</kw>
+<arg>xpath=//button[normalize-space()='Sign Up']</arg>
+<status status="PASS" start="2025-06-30T13:40:17.023051" elapsed="21.642554"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//input[@placeholder='Username']</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-30T13:40:38.666043" elapsed="0.044776"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-30T13:40:39.212668" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-30T13:40:38.711510" elapsed="0.501477"/>
+</kw>
+<status status="PASS" start="2025-06-30T13:40:14.452893" elapsed="24.760406"/>
+</kw>
+<kw name="Faire Inscription">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-30T13:40:39.216354" level="INFO">Typing text 'testuser' into text field 'xpath=//input[@placeholder='Username']'.</msg>
+<arg>xpath=//input[@placeholder='Username']</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-30T13:40:39.215595" elapsed="0.335039"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-30T13:40:39.552082" level="INFO">Typing text 'nouveau@email.com' into text field 'xpath=//input[@placeholder='Email']'.</msg>
+<arg>xpath=//input[@placeholder='Email']</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-30T13:40:39.551154" elapsed="0.473508"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-30T13:40:40.025819" level="INFO">Typing text 'testpassword' into text field 'xpath=//input[@placeholder='Password']'.</msg>
+<arg>xpath=//input[@placeholder='Password']</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-30T13:40:40.025144" elapsed="0.519829"/>
+</kw>
+<kw name="Cliquer Sur Bouton Modal">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${xpath}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-30T13:40:40.546654" elapsed="0.055414"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${xpath}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-06-30T13:40:40.602454" elapsed="0.062046"/>
+</kw>
+<kw name="Attendre Disparition Backdrop">
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<msg time="2025-06-30T13:41:00.954505" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-8.png"&gt;&lt;img src="selenium-screenshot-8.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-06-30T13:41:00.954940" level="FAIL">Element 'xpath=//div[contains(@class,'ModalManager-invisibleBackdrop')]' still visible after 20 seconds.</msg>
+<arg>xpath=//div[contains(@class,'ModalManager-invisibleBackdrop')]</arg>
+<arg>${MODAL_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="FAIL" start="2025-06-30T13:40:40.666305" elapsed="20.292386">Element 'xpath=//div[contains(@class,'ModalManager-invisibleBackdrop')]' still visible after 20 seconds.</status>
+</kw>
+<arg>Wait Until Element Is Not Visible</arg>
+<arg>xpath=//div[contains(@class,'ModalManager-invisibleBackdrop')]</arg>
+<arg>${MODAL_TIMEOUT}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-06-30T13:40:40.665839" elapsed="20.293210"/>
+</kw>
+<status status="PASS" start="2025-06-30T13:40:40.665059" elapsed="20.294617"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-30T13:41:00.960783" level="INFO">Clicking element '//button[@type='submit' and normalize-space()='Sign Up']'.</msg>
+<arg>${xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-30T13:41:00.960121" elapsed="0.185221"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-30T13:41:02.147060" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-30T13:41:01.145866" elapsed="1.001450"/>
+</kw>
+<kw name="Attendre Disparition Backdrop">
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<msg time="2025-06-30T13:41:22.523249" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-9.png"&gt;&lt;img src="selenium-screenshot-9.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-06-30T13:41:22.523655" level="FAIL">Element 'xpath=//div[contains(@class,'ModalManager-invisibleBackdrop')]' still visible after 20 seconds.</msg>
+<arg>xpath=//div[contains(@class,'ModalManager-invisibleBackdrop')]</arg>
+<arg>${MODAL_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="FAIL" start="2025-06-30T13:41:02.148526" elapsed="20.379715">Element 'xpath=//div[contains(@class,'ModalManager-invisibleBackdrop')]' still visible after 20 seconds.</status>
+</kw>
+<arg>Wait Until Element Is Not Visible</arg>
+<arg>xpath=//div[contains(@class,'ModalManager-invisibleBackdrop')]</arg>
+<arg>${MODAL_TIMEOUT}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-06-30T13:41:02.148252" elapsed="20.380384"/>
+</kw>
+<status status="PASS" start="2025-06-30T13:41:02.147726" elapsed="20.381559"/>
+</kw>
+<arg>xpath=//button[@type='submit' and normalize-space()='Sign Up']</arg>
+<status status="PASS" start="2025-06-30T13:40:40.545683" elapsed="41.983876"/>
+</kw>
+<arg>testuser</arg>
+<arg>nouveau@email.com</arg>
+<arg>testpassword</arg>
+<status status="PASS" start="2025-06-30T13:40:39.214433" elapsed="43.315334"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Welcome to CGI FORUM</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-06-30T13:41:22.531507" elapsed="0.045884"/>
+</kw>
+<kw name="Fermer Navigateur">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-06-30T13:41:22.579524" elapsed="2.421353"/>
+</kw>
+<status status="PASS" start="2025-06-30T13:41:22.578723" elapsed="2.422395"/>
+</kw>
+<doc>Vérifie qu'un nouvel utilisateur peut créer un compte</doc>
+<status status="PASS" start="2025-06-30T13:40:14.450795" elapsed="70.551000"/>
+</test>
+<test id="s1-t4" name="Inscription Invalide" line="79">
+<kw name="Ouvrir La Page D'Inscription">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-06-30T13:41:25.005286" level="INFO">Opening browser 'chrome' to base url 'http://localhost/flarum-v1.x-php8.0/public/'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-06-30T13:41:25.004897" elapsed="2.291628"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-06-30T13:41:27.296845" elapsed="0.063311"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//button[normalize-space()='Sign Up']</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-30T13:41:27.360695" elapsed="0.073422"/>
+</kw>
+<kw name="Attendre Disparition Backdrop">
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>xpath=//div[contains(@class,'ModalManager-invisibleBackdrop')]</arg>
+<arg>${MODAL_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2025-06-30T13:41:27.435398" elapsed="0.016411"/>
+</kw>
+<arg>Wait Until Element Is Not Visible</arg>
+<arg>xpath=//div[contains(@class,'ModalManager-invisibleBackdrop')]</arg>
+<arg>${MODAL_TIMEOUT}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-06-30T13:41:27.435051" elapsed="0.016971"/>
+</kw>
+<status status="PASS" start="2025-06-30T13:41:27.434534" elapsed="0.017637"/>
+</kw>
+<kw name="Cliquer Sur Bouton Modal">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${xpath}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-30T13:41:27.453046" elapsed="0.023694"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${xpath}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-06-30T13:41:27.477203" elapsed="0.037093"/>
+</kw>
+<kw name="Attendre Disparition Backdrop">
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>xpath=//div[contains(@class,'ModalManager-invisibleBackdrop')]</arg>
+<arg>${MODAL_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2025-06-30T13:41:27.516108" elapsed="0.015222"/>
+</kw>
+<arg>Wait Until Element Is Not Visible</arg>
+<arg>xpath=//div[contains(@class,'ModalManager-invisibleBackdrop')]</arg>
+<arg>${MODAL_TIMEOUT}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-06-30T13:41:27.515662" elapsed="0.016034"/>
+</kw>
+<status status="PASS" start="2025-06-30T13:41:27.514843" elapsed="0.017233"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-30T13:41:27.533175" level="INFO">Clicking element '//button[normalize-space()='Sign Up']'.</msg>
+<arg>${xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-30T13:41:27.532482" elapsed="0.159056"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-30T13:41:28.693672" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-30T13:41:27.692032" elapsed="1.002644"/>
+</kw>
+<kw name="Attendre Disparition Backdrop">
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<msg time="2025-06-30T13:41:49.048011" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-10.png"&gt;&lt;img src="selenium-screenshot-10.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-06-30T13:41:49.048301" level="FAIL">Element 'xpath=//div[contains(@class,'ModalManager-invisibleBackdrop')]' still visible after 20 seconds.</msg>
+<arg>xpath=//div[contains(@class,'ModalManager-invisibleBackdrop')]</arg>
+<arg>${MODAL_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="FAIL" start="2025-06-30T13:41:28.698393" elapsed="20.352565">Element 'xpath=//div[contains(@class,'ModalManager-invisibleBackdrop')]' still visible after 20 seconds.</status>
+</kw>
+<arg>Wait Until Element Is Not Visible</arg>
+<arg>xpath=//div[contains(@class,'ModalManager-invisibleBackdrop')]</arg>
+<arg>${MODAL_TIMEOUT}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-06-30T13:41:28.696748" elapsed="20.354343"/>
+</kw>
+<status status="PASS" start="2025-06-30T13:41:28.695761" elapsed="20.355512"/>
+</kw>
+<arg>xpath=//button[normalize-space()='Sign Up']</arg>
+<status status="PASS" start="2025-06-30T13:41:27.452476" elapsed="21.598913"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//input[@placeholder='Username']</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-30T13:41:49.051602" elapsed="0.033205"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-30T13:41:49.585952" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-30T13:41:49.085123" elapsed="0.501361"/>
+</kw>
+<status status="PASS" start="2025-06-30T13:41:25.004155" elapsed="24.582620"/>
+</kw>
+<kw name="Faire Inscription">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-30T13:41:49.591603" level="INFO">Typing text 'utilisateur_existant' into text field 'xpath=//input[@placeholder='Username']'.</msg>
+<arg>xpath=//input[@placeholder='Username']</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-30T13:41:49.590908" elapsed="0.405229"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-30T13:41:49.997501" level="INFO">Typing text 'berrichihanae1@gmail.com' into text field 'xpath=//input[@placeholder='Email']'.</msg>
+<arg>xpath=//input[@placeholder='Email']</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-30T13:41:49.996742" elapsed="0.393067"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-30T13:41:50.390764" level="INFO">Typing text 'motdepasse123' into text field 'xpath=//input[@placeholder='Password']'.</msg>
+<arg>xpath=//input[@placeholder='Password']</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-30T13:41:50.390198" elapsed="0.355041"/>
+</kw>
+<kw name="Cliquer Sur Bouton Modal">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${xpath}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-30T13:41:50.747087" elapsed="0.046814"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${xpath}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-06-30T13:41:50.794344" elapsed="0.061610"/>
+</kw>
+<kw name="Attendre Disparition Backdrop">
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<msg time="2025-06-30T13:42:11.388671" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-11.png"&gt;&lt;img src="selenium-screenshot-11.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-06-30T13:42:11.390062" level="FAIL">Element 'xpath=//div[contains(@class,'ModalManager-invisibleBackdrop')]' still visible after 20 seconds.</msg>
+<arg>xpath=//div[contains(@class,'ModalManager-invisibleBackdrop')]</arg>
+<arg>${MODAL_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="FAIL" start="2025-06-30T13:41:50.857477" elapsed="20.537702">Element 'xpath=//div[contains(@class,'ModalManager-invisibleBackdrop')]' still visible after 20 seconds.</status>
+</kw>
+<arg>Wait Until Element Is Not Visible</arg>
+<arg>xpath=//div[contains(@class,'ModalManager-invisibleBackdrop')]</arg>
+<arg>${MODAL_TIMEOUT}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-06-30T13:41:50.857147" elapsed="20.538424"/>
+</kw>
+<status status="PASS" start="2025-06-30T13:41:50.856526" elapsed="20.539330"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-30T13:42:11.396947" level="INFO">Clicking element '//button[@type='submit' and normalize-space()='Sign Up']'.</msg>
+<arg>${xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-30T13:42:11.396246" elapsed="0.201360"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-30T13:42:12.598497" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-30T13:42:11.597870" elapsed="1.000950"/>
+</kw>
+<kw name="Attendre Disparition Backdrop">
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<msg time="2025-06-30T13:42:32.773945" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-12.png"&gt;&lt;img src="selenium-screenshot-12.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-06-30T13:42:32.774199" level="FAIL">Element 'xpath=//div[contains(@class,'ModalManager-invisibleBackdrop')]' still visible after 20 seconds.</msg>
+<arg>xpath=//div[contains(@class,'ModalManager-invisibleBackdrop')]</arg>
+<arg>${MODAL_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="FAIL" start="2025-06-30T13:42:12.601481" elapsed="20.173943">Element 'xpath=//div[contains(@class,'ModalManager-invisibleBackdrop')]' still visible after 20 seconds.</status>
+</kw>
+<arg>Wait Until Element Is Not Visible</arg>
+<arg>xpath=//div[contains(@class,'ModalManager-invisibleBackdrop')]</arg>
+<arg>${MODAL_TIMEOUT}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-06-30T13:42:12.600969" elapsed="20.174605"/>
+</kw>
+<status status="PASS" start="2025-06-30T13:42:12.599388" elapsed="20.176280"/>
+</kw>
+<arg>xpath=//button[@type='submit' and normalize-space()='Sign Up']</arg>
+<status status="PASS" start="2025-06-30T13:41:50.746133" elapsed="42.029636"/>
+</kw>
+<arg>utilisateur_existant</arg>
+<arg>berrichihanae1@gmail.com</arg>
+<arg>motdepasse123</arg>
+<status status="PASS" start="2025-06-30T13:41:49.589643" elapsed="43.186195"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-06-30T13:42:32.806038" level="INFO">Current page contains text 'Sign Up'.</msg>
+<arg>Sign Up</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-06-30T13:42:32.776467" elapsed="0.029770"/>
+</kw>
+<kw name="Fermer Navigateur">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-06-30T13:42:32.807432" elapsed="2.298667"/>
+</kw>
+<status status="PASS" start="2025-06-30T13:42:32.806899" elapsed="2.299415"/>
+</kw>
+<doc>Vérifie que l'inscription échoue si l'email existe déjà</doc>
+<status status="PASS" start="2025-06-30T13:41:25.003211" elapsed="70.103553"/>
+</test>
+<status status="PASS" start="2025-06-30T13:37:47.507363" elapsed="287.600972"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Cas" id="s1" pass="4" fail="0" skip="0">Cas</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
